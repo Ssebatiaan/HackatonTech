@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "cb349914-a925-4c1e-92d4-74d30e2f8517",
+		"name": "Hacktathon 2025 UTB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24781018",
+		"_collection_link": "https://grey-space-134415.postman.co/workspace/My-Workspace~23949fcb-6547-498f-8015-193272143298/collection/24781018-cb349914-a925-4c1e-92d4-74d30e2f8517?action=share&source=collection_link&creator=24781018"
+	},
+	"item": [
+		{
+			"name": "Gestion",
+			"item": [
+				{
+					"name": "Obtener informacion instituciones",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImhhY2t0YXRob25fdGVjaEBnbWFpbC5jb20iLCJleHAiOjE3NDQxNDAyMTIsImNvcnJlbyI6ImhhY2t0YXRob25fdGVjaEBnbWFpbC5jb20iLCJvcmlnX2lhdCI6MTc0Mzg4MTAxMn0.Mc1o5FJHfZwND_eKyDKsmQT77Z-yFqtvpKxOF5dTY_s",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/gestion/instituciones/1/obtener_informacion_instituciones",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"gestion",
+								"instituciones",
+								"1",
+								"obtener_informacion_instituciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener informacion personas",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImhhY2t0YXRob25fdGVjaEBnbWFpbC5jb20iLCJleHAiOjE3NDQxNDAyMTIsImNvcnJlbyI6ImhhY2t0YXRob25fdGVjaEBnbWFpbC5jb20iLCJvcmlnX2lhdCI6MTc0Mzg4MTAxMn0.Mc1o5FJHfZwND_eKyDKsmQT77Z-yFqtvpKxOF5dTY_s",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/gestion/personas/1/obtener_informacion_personas",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"gestion",
+								"personas",
+								"1",
+								"obtener_informacion_personas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Autenticacion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"correo\":\"hacktathon_tech@gmail.com\",\n    \"password\":\"universidad2025\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/usuario/autenticar/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"usuario",
+								"autenticar",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

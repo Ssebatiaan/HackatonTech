@@ -6,8 +6,6 @@ from gestion import models as m_gestion
 
 class InformacionPersonasModelSerializer(serializers.ModelSerializer):
 
-    graficas_asociadas = serializers.SerializerMethodField()
-
     class Meta:
         model = m_gestion.Persona
         fields = [
@@ -22,15 +20,12 @@ class InformacionPersonasModelSerializer(serializers.ModelSerializer):
 
 class InformacionInstitucionesModelSerializer(serializers.ModelSerializer):
 
-    graficas_asociadas = serializers.SerializerMethodField()
-
     class Meta:
         model = m_gestion.Instuciones
         fields = [
             "id",
-            "Codigo Institucion",
-            "Descripcion",
-            "Ciudad",
+            "CodInstucion",
+            "descripcion",
+            "ciudad",
             "Departamento"
-            
         ]

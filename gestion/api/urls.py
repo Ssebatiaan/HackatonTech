@@ -6,6 +6,7 @@ from . import viewsets as vs
 
 router = DefaultRouter()
 router.register(r'personas', vs.PersonasDashboardModelViewSet)
+router.register(r'instituciones', vs.InstitucionesDashboardModelViewSet)
 #router.register(r'filtro_grafica', vs.FiltroGraficaModelViewSet)
 #router.register(r'opcion_filtro_grafica', vs.OpcionFiltroGraficaModelViewSet)
 #router.register(r'categoria_grafica', vs.CategoriaGraficaModelViewSet)

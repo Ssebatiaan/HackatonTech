@@ -46,8 +46,6 @@ class ObtainJSONWebTokenCustom(ObtainJSONWebToken, RequestAplicationMixin):
         response = super(ObtainJSONWebTokenCustom, self).post(request, *args, **kwargs)
         if response.status_code == status.HTTP_200_OK:
             user = get_user_model().objects.get(correo=request.data[get_user_model().USERNAME_FIELD])
-            if not user.tipo_usuario:
-                return Response({"error":"No tienes un rol asignado, habla con un administrador para que te ayude"}, status=status.HTTP_401_UNAUTHORIZED)
             refresh_token = Token.objects.filter(user=user)
             if refresh_token.exists():
                 refresh_token.delete()

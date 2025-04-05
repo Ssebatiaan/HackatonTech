@@ -33,12 +33,11 @@ class InstitucionesDashboardModelViewSet(viewsets.ModelViewSet):
     serializer_class = serializers_gestion.InformacionInstitucionesModelSerializer
     
     @action(methods=['GET'], detail=True)
-    def obtener_informacion_Instituciones(self, request, pk=None):
-        #categoria_dashboard =  self.get_queryset().filter(rol_asociado__id=request.user.tipo_usuario.id, categoria_asociada__id = pk)
+    def obtener_informacion_instituciones(self, request, pk=None):
+        
         informacion_Instituciones =  self.get_queryset()
         if informacion_Instituciones:
             data = serializers_gestion.InformacionInstitucionesModelSerializer(informacion_Instituciones, many=True).data
-            #input(data)
             return Response(data, status=status.HTTP_200_OK)
         return Response({"error":"no hay instituciones registradas en el aplicativo, contacte con el administrador para mas informacion"}, status=status.HTTP_400_BAD_REQUEST)
     

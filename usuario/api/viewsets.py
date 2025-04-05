@@ -8,10 +8,10 @@ from rest_framework.response import Response
 from rest_framework import serializers, status
 from rest_framework import viewsets
 from django.contrib.auth.hashers import check_password
-from dashboard_udec.drfconfig.paginations import CFEAPIPagination, StandardResultsSetPagination
+from hacktathon_tech.drfconfig.paginations import CFEAPIPagination, StandardResultsSetPagination
 from usuario.api.serializers import CustomRefreshJSONWebTokenSerializer, UserSerializer, \
     TipoUsuarioModelSerializer, UsuarioModelSerializer, UsuarioListModelSerializer
-from dashboard_udec.drfconfig import permissions as permission_api
+from hacktathon_tech.drfconfig import permissions as permission_api
 from rest_framework.authtoken.models import Token
 from rest_framework_jwt.settings import api_settings
 from usuario.api.mixins.request_aplication_mixin import RequestAplicationMixin

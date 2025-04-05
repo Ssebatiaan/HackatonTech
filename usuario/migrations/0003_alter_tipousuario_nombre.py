@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='tipousuario',
             name='nombre',
-            field=models.CharField(choices=[('Profesor', 'PROFESOR'), ('Director', 'DIRECTOR'), ('Administrador', 'ADMINISTRADOR PLATAFORMA dashboard_udec')], max_length=200, null=True, verbose_name='nombre'),
+            field=models.CharField(choices=[('Profesor', 'PROFESOR'), ('Director', 'DIRECTOR'), ('Administrador', 'ADMINISTRADOR PLATAFORMA hacktathon_tech')], max_length=200, null=True, verbose_name='nombre'),
         ),
     ]
